@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.list{
+    position: relative;
+    background: #222;
+    width: 350px;
+    border-radius: 5%;
+}
+
+.list h2{
+    background: #555;
+    color: #80ff14;
+    padding: 10px 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+
+}
+
+.list ul{
+    position: relative;
+    padding: 20px;
+}
+
+.list ul li{
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.list ul li:last-child{
+    border-bottom: none;
+}
+
+.list ul li label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list ul li label input{
+    visibility: hidden;
+    appearance: none;
+}
+
+.list ul li label p{
+    psosition: absolute;
+    color: #80ff14;
+}
+
+.list ul li label span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+
+.list ul li label span:before{
+    content:'';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+
+.list ul li label input:checked ~ p{
+    text-decoration: line-through;
+    color: #fff;
+}
+
+.list ul li label input:checked ~ span{
+    background: #80ff14;
+}
+
+.list ul li label input:checked ~ span::before{
+    border-left: 2px solid #222;
+    border-bottom: 2px solid #222;
+}
